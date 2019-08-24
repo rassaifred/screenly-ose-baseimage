@@ -12,7 +12,7 @@ RUN git clone https://github.com/popcornmix/omxplayer.git
 
 RUN cd omxplayer
 
-RUN ./prepare-native-raspbian.sh
+CMD ["bash", "./prepare-native-raspbian.sh"]
 
 RUN make ffmpeg
 RUN make -j$(nproc)
