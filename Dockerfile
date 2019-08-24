@@ -9,6 +9,15 @@ RUN apt-get update && \
 
 RUN git clone https://github.com/popcornmix/omxplayer.git
 
+RUN cd omxplayer
+
+RUN ./prepare-native-raspbian.sh
+
+RUN make ffmpeg
+RUN make -j$(nproc)
+
+RUN make install
+
 
 RUN apt-get update && \
     apt-get -y install \
