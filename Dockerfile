@@ -7,26 +7,28 @@ RUN apt-get update && \
     apt-get -y install \
         build-essential \
         curl \
-        ffmpeg \
         git-core \
         libffi-dev \
         libssl-dev \
-        lsb-release \
-        mplayer \
+        matchbox \
         net-tools \
-        procps \
+        nginx-light \
+        omxplayer \
+        psmisc \
         python-dev \
-        python-gobject \
         python-imaging \
         python-netifaces \
         python-simplejson \
+        libraspberrypi0 \
+        lsb-release \
+        ifupdown \
         sqlite3 \
-    && \
+        uzbl \
+        x11-xserver-utils \
+        xserver-xorg && \
     apt-get clean
 
 # Install Python requirements
 ADD requirements.txt /tmp/requirements.txt
-ADD requirements.dev.txt /tmp/requirements.dev.txt
 RUN curl -s https://bootstrap.pypa.io/get-pip.py | python && \
-    pip install -r /tmp/requirements.txt && \
-    pip install -r /tmp/requirements.dev.txt
+    pip install -r /tmp/requirements.txt
