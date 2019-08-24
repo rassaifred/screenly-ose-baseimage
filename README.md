@@ -1,0 +1,1 @@
+# screenly-ose-baseimage
