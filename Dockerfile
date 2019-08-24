@@ -1,5 +1,14 @@
-FROM debian:stretch
+FROM debian:slim
 MAINTAINER rassaifred
+
+
+RUN apt-get update && \
+    apt-get -y install \
+        git && \
+    apt-get clean
+
+RUN git clone https://github.com/popcornmix/omxplayer.git
+
 
 RUN apt-get update && \
     apt-get -y install \
