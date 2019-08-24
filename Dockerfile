@@ -1,8 +1,5 @@
-#FROM debian:stretch
-#FROM balenalib/raspberrypi3-debian
-FROM balenalib/raspberrypi3-debian:stretch-run-20190612
+FROM debian:stretch
 MAINTAINER rassaifred
-#MAINTAINER Viktor Petersson <vpetersson@screenly.io>
 
 RUN apt-get update && \
     apt-get -y install \
