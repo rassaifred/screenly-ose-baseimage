@@ -1,32 +1,32 @@
-FROM balenalib/raspberrypi3-debian
+FROM debian:stretch
+#FROM balenalib/raspberrypi3-debian
 MAINTAINER rassaifred
+#MAINTAINER Viktor Petersson <vpetersson@screenly.io>
 
 RUN apt-get update && \
     apt-get -y install \
         build-essential \
         curl \
+        ffmpeg \
         git-core \
         libffi-dev \
         libssl-dev \
-        matchbox \
+        lsb-release \
+        mplayer \
         net-tools \
-        nginx-light \
-        omxplayer \
-        psmisc \
+        procps \
         python-dev \
+        python-gobject \
         python-imaging \
         python-netifaces \
         python-simplejson \
-        libraspberrypi0 \
-        lsb-release \
-        ifupdown \
         sqlite3 \
-        uzbl \
-        x11-xserver-utils \
-        xserver-xorg && \
+    && \
     apt-get clean
 
 # Install Python requirements
 ADD requirements.txt /tmp/requirements.txt
+ADD requirements.dev.txt /tmp/requirements.dev.txt
 RUN curl -s https://bootstrap.pypa.io/get-pip.py | python && \
-    pip install --upgrade -r /tmp/requirements.txt
+    pip install -r /tmp/requirements.txt && \
+    pip install -r /tmp/requirements.dev.txt
