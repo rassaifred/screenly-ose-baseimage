@@ -1,5 +1,6 @@
-FROM debian:stretch
+#FROM debian:stretch
 #FROM balenalib/raspberrypi3-debian
+FROM balenalib/raspberrypi3-debian:stretch-run-20190612
 MAINTAINER rassaifred
 #MAINTAINER Viktor Petersson <vpetersson@screenly.io>
 
