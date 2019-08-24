@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM balenalib/raspberrypi3-debian
 MAINTAINER rassaifred
 
 RUN apt-get update && \
