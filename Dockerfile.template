@@ -9,7 +9,6 @@ MAINTAINER rassaifred
 
 RUN [ "cross-build-start" ]
 
-
 RUN apt-get update && \
     apt-get -y install \
         build-essential \
