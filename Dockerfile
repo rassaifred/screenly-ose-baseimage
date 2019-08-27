@@ -12,6 +12,7 @@ RUN [ "cross-build-start" ]
 
 RUN apt-get update && \
     apt-get -y install \
+        openssh-client \
         build-essential \
         curl \
         git-core \
