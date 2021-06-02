@@ -27,6 +27,6 @@ requests[security]==2.20.0
 sh==1.08
 six==1.11.0
 uptime==2.0.2
-urllib3==1.25.1
+urllib3==1.26.5
 werkzeug==0.14.1
 youtube_dl>=2017.7.2
