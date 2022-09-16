@@ -1,4 +1,4 @@
-Mako==0.7.3
+Mako==1.2.2
 MarkupSafe==1.0
 ansible==2.8.1
 certifi==2018.4.16
